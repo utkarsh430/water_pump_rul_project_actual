@@ -1,0 +1,900 @@
+{
+  "dataset": {
+    "rows_used": 10000,
+    "sensor_count": 50,
+    "selected_sensors": [
+      "sensor_00",
+      "sensor_05",
+      "sensor_10",
+      "sensor_17",
+      "sensor_22",
+      "sensor_28",
+      "sensor_33",
+      "sensor_39",
+      "sensor_44",
+      "sensor_51"
+    ],
+    "thresholds": {
+      "Q10": 135.93166666666667,
+      "Q50": 202.59166666666664,
+      "Q90": 269.25166666666667
+    },
+    "rul_category_counts": {
+      "Moderately High RUL": 4000,
+      "Moderately Low RUL": 4000,
+      "Extremely High RUL": 1000,
+      "Extremely Low RUL": 1000
+    },
+    "available_sensor_columns": [
+      "sensor_00",
+      "sensor_01",
+      "sensor_02",
+      "sensor_03",
+      "sensor_04",
+      "sensor_05",
+      "sensor_06",
+      "sensor_07",
+      "sensor_08",
+      "sensor_09",
+      "sensor_10",
+      "sensor_11",
+      "sensor_12",
+      "sensor_13",
+      "sensor_14",
+      "sensor_16",
+      "sensor_17",
+      "sensor_18",
+      "sensor_19",
+      "sensor_20",
+      "sensor_21",
+      "sensor_22",
+      "sensor_23",
+      "sensor_24",
+      "sensor_25",
+      "sensor_26",
+      "sensor_27",
+      "sensor_28",
+      "sensor_29",
+      "sensor_30",
+      "sensor_31",
+      "sensor_32",
+      "sensor_33",
+      "sensor_34",
+      "sensor_35",
+      "sensor_36",
+      "sensor_37",
+      "sensor_38",
+      "sensor_39",
+      "sensor_40",
+      "sensor_41",
+      "sensor_42",
+      "sensor_43",
+      "sensor_44",
+      "sensor_45",
+      "sensor_46",
+      "sensor_47",
+      "sensor_48",
+      "sensor_49",
+      "sensor_51"
+    ],
+    "missing_prompt_sensors": [
+      "sensor_15",
+      "sensor_50"
+    ]
+  },
+  "toy_examples": {
+    "segmentation": {
+      "signal": [
+        1,
+        1,
+        1,
+        1,
+        10,
+        -10,
+        9,
+        -9
+      ],
+      "segment_count": 3,
+      "segments": [
+        {
+          "start": 0,
+          "end": 4,
+          "variance": 0.0,
+          "length": 4,
+          "is_stable": true
+        },
+        {
+          "start": 4,
+          "end": 6,
+          "variance": 100.0,
+          "length": 2,
+          "is_stable": true
+        },
+        {
+          "start": 6,
+          "end": 8,
+          "variance": 81.0,
+          "length": 2,
+          "is_stable": true
+        }
+      ]
+    },
+    "clustering": {
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        3,
+        3,
+        2,
+        2
+      ],
+      "cluster_summary": [
+        {
+          "cluster_id": 0,
+          "size": 3,
+          "majority_class": "B",
+          "majority_count": 3,
+          "purity": 1.0,
+          "count::B": 3.0,
+          "count::A": NaN,
+          "count::D": NaN,
+          "count::C": NaN
+        },
+        {
+          "cluster_id": 1,
+          "size": 3,
+          "majority_class": "A",
+          "majority_count": 3,
+          "purity": 1.0,
+          "count::B": NaN,
+          "count::A": 3.0,
+          "count::D": NaN,
+          "count::C": NaN
+        },
+        {
+          "cluster_id": 2,
+          "size": 2,
+          "majority_class": "D",
+          "majority_count": 2,
+          "purity": 1.0,
+          "count::B": NaN,
+          "count::A": NaN,
+          "count::D": 2.0,
+          "count::C": NaN
+        },
+        {
+          "cluster_id": 3,
+          "size": 2,
+          "majority_class": "C",
+          "majority_count": 2,
+          "purity": 1.0,
+          "count::B": NaN,
+          "count::A": NaN,
+          "count::D": NaN,
+          "count::C": 2.0
+        }
+      ]
+    },
+    "kadane": {
+      "array": [
+        -2,
+        1,
+        2,
+        3,
+        -1,
+        2,
+        -5
+      ],
+      "best_sum": 7.0,
+      "start": 1,
+      "end": 5,
+      "expected_subarray": [
+        1,
+        2,
+        3,
+        -1,
+        2
+      ]
+    }
+  },
+  "task1_segmentation": [
+    {
+      "sensor": "sensor_00",
+      "variance_threshold": 0.0006493195842282755,
+      "segment_count": 12,
+      "avg_segment_length": 833.3333333333334,
+      "max_segment_variance": 0.004147268434224318,
+      "segment_rul_distribution": {
+        "Moderately High RUL": 5,
+        "Extremely Low RUL": 5,
+        "Moderately Low RUL": 2
+      },
+      "temporal_dynamics_discussion": "Highly dynamic signal with frequent structural changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_05",
+      "variance_threshold": 11.949091537091217,
+      "segment_count": 44,
+      "avg_segment_length": 227.27272727272728,
+      "max_segment_variance": 45.32096709155295,
+      "segment_rul_distribution": {
+        "Moderately Low RUL": 20,
+        "Moderately High RUL": 17,
+        "Extremely Low RUL": 6,
+        "Extremely High RUL": 1
+      },
+      "temporal_dynamics_discussion": "Highly dynamic signal with frequent structural changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_10",
+      "variance_threshold": 4.556208999407653,
+      "segment_count": 60,
+      "avg_segment_length": 166.66666666666666,
+      "max_segment_variance": 23.244003723186523,
+      "segment_rul_distribution": {
+        "Moderately Low RUL": 27,
+        "Moderately High RUL": 24,
+        "Extremely Low RUL": 8,
+        "Extremely High RUL": 1
+      },
+      "temporal_dynamics_discussion": "Highly dynamic signal with frequent structural changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_17",
+      "variance_threshold": 22.83972562169623,
+      "segment_count": 60,
+      "avg_segment_length": 166.66666666666666,
+      "max_segment_variance": 596.2014608470373,
+      "segment_rul_distribution": {
+        "Moderately High RUL": 26,
+        "Moderately Low RUL": 25,
+        "Extremely Low RUL": 8,
+        "Extremely High RUL": 1
+      },
+      "temporal_dynamics_discussion": "Highly dynamic signal with frequent structural changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_22",
+      "variance_threshold": 142.37038029410786,
+      "segment_count": 9,
+      "avg_segment_length": 1111.111111111111,
+      "max_segment_variance": 450.55975486333455,
+      "segment_rul_distribution": {
+        "Extremely High RUL": 4,
+        "Moderately High RUL": 4,
+        "Moderately Low RUL": 1
+      },
+      "temporal_dynamics_discussion": "Moderately dynamic signal with noticeable regime changes.",
+      "rul_relation_discussion": "Some segments overlap lower-RUL regions, but the relationship is mixed."
+    },
+    {
+      "sensor": "sensor_28",
+      "variance_threshold": 1950.1297761724848,
+      "segment_count": 7,
+      "avg_segment_length": 1428.5714285714287,
+      "max_segment_variance": 101925.69507429173,
+      "segment_rul_distribution": {
+        "Moderately Low RUL": 6,
+        "Moderately High RUL": 1
+      },
+      "temporal_dynamics_discussion": "Moderately dynamic signal with noticeable regime changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_33",
+      "variance_threshold": 2533.818414614133,
+      "segment_count": 6,
+      "avg_segment_length": 1666.6666666666667,
+      "max_segment_variance": 2392.219938927953,
+      "segment_rul_distribution": {
+        "Moderately Low RUL": 4,
+        "Moderately High RUL": 2
+      },
+      "temporal_dynamics_discussion": "Moderately dynamic signal with noticeable regime changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_39",
+      "variance_threshold": 12.011836133698912,
+      "segment_count": 22,
+      "avg_segment_length": 454.54545454545456,
+      "max_segment_variance": 275.76637584967375,
+      "segment_rul_distribution": {
+        "Moderately Low RUL": 12,
+        "Moderately High RUL": 8,
+        "Extremely High RUL": 1,
+        "Extremely Low RUL": 1
+      },
+      "temporal_dynamics_discussion": "Highly dynamic signal with frequent structural changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    },
+    {
+      "sensor": "sensor_44",
+      "variance_threshold": 28.291926228541787,
+      "segment_count": 46,
+      "avg_segment_length": 217.3913043478261,
+      "max_segment_variance": 126.17623438214672,
+      "segment_rul_distribution": {
+        "Moderately High RUL": 21,
+        "Moderately Low RUL": 19,
+        "Extremely High RUL": 5,
+        "Extremely Low RUL": 1
+      },
+      "temporal_dynamics_discussion": "Highly dynamic signal with frequent structural changes.",
+      "rul_relation_discussion": "Some segments overlap lower-RUL regions, but the relationship is mixed."
+    },
+    {
+      "sensor": "sensor_51",
+      "variance_threshold": 354.2010573437141,
+      "segment_count": 9,
+      "avg_segment_length": 1111.111111111111,
+      "max_segment_variance": 1692.9311811718949,
+      "segment_rul_distribution": {
+        "Moderately Low RUL": 8,
+        "Moderately High RUL": 1
+      },
+      "temporal_dynamics_discussion": "Moderately dynamic signal with noticeable regime changes.",
+      "rul_relation_discussion": "A substantial share of segments falls in lower-RUL regions, suggesting degradation sensitivity."
+    }
+  ],
+  "task2_clustering": [
+    {
+      "cluster_id": 0,
+      "size": 77,
+      "majority_class": "Moderately High RUL",
+      "majority_count": 39,
+      "purity": 0.5064935064935064,
+      "count::Extremely High RUL": 1.0,
+      "count::Moderately High RUL": 39,
+      "count::Moderately Low RUL": 31,
+      "count::Extremely Low RUL": 6.0,
+      "mapping_discussion": "Cluster 0 is dominated by Moderately High RUL with purity 0.506."
+    },
+    {
+      "cluster_id": 1,
+      "size": 11,
+      "majority_class": "Moderately Low RUL",
+      "majority_count": 10,
+      "purity": 0.9090909090909091,
+      "count::Extremely High RUL": NaN,
+      "count::Moderately High RUL": 1,
+      "count::Moderately Low RUL": 10,
+      "count::Extremely Low RUL": NaN,
+      "mapping_discussion": "Cluster 1 is dominated by Moderately Low RUL with purity 0.909."
+    },
+    {
+      "cluster_id": 2,
+      "size": 52,
+      "majority_class": "Moderately Low RUL",
+      "majority_count": 47,
+      "purity": 0.9038461538461539,
+      "count::Extremely High RUL": NaN,
+      "count::Moderately High RUL": 2,
+      "count::Moderately Low RUL": 47,
+      "count::Extremely Low RUL": 3.0,
+      "mapping_discussion": "Cluster 2 is dominated by Moderately Low RUL with purity 0.904."
+    },
+    {
+      "cluster_id": 3,
+      "size": 9860,
+      "majority_class": "Moderately High RUL",
+      "majority_count": 3958,
+      "purity": 0.40141987829614606,
+      "count::Extremely High RUL": 999.0,
+      "count::Moderately High RUL": 3958,
+      "count::Moderately Low RUL": 3912,
+      "count::Extremely Low RUL": 991.0,
+      "mapping_discussion": "Cluster 3 is dominated by Moderately High RUL with purity 0.401."
+    }
+  ],
+  "task3_kadane": [
+    {
+      "sensor": "sensor_32",
+      "start_index": 4197,
+      "end_index": 8180,
+      "total_deviation": 5165.272588308819,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 3181,
+      "interval_length": 3984,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_29",
+      "start_index": 5061,
+      "end_index": 9999,
+      "total_deviation": 4935.523646174681,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 3939,
+      "interval_length": 4939,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_17",
+      "start_index": 7630,
+      "end_index": 9999,
+      "total_deviation": 4372.12616625666,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 1370,
+      "interval_length": 2370,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_37",
+      "start_index": 8808,
+      "end_index": 9999,
+      "total_deviation": 4352.524074656464,
+      "dominant_rul_category": "Extremely Low RUL",
+      "dominant_count": 1000,
+      "interval_length": 1192,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_25",
+      "start_index": 5332,
+      "end_index": 9998,
+      "total_deviation": 4152.689111821187,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 3668,
+      "interval_length": 4667,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_36",
+      "start_index": 3545,
+      "end_index": 9999,
+      "total_deviation": 4095.080264166409,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 6455,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_24",
+      "start_index": 8600,
+      "end_index": 9999,
+      "total_deviation": 3682.629798309794,
+      "dominant_rul_category": "Extremely Low RUL",
+      "dominant_count": 1000,
+      "interval_length": 1400,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_35",
+      "start_index": 3450,
+      "end_index": 9998,
+      "total_deviation": 2681.1193095409685,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 6549,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_40",
+      "start_index": 7332,
+      "end_index": 9113,
+      "total_deviation": 1776.4385146764757,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 1668,
+      "interval_length": 1782,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_48",
+      "start_index": 5586,
+      "end_index": 7603,
+      "total_deviation": 1321.9174855325493,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 2018,
+      "interval_length": 2018,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_22",
+      "start_index": 8599,
+      "end_index": 9998,
+      "total_deviation": 1209.9935823082478,
+      "dominant_rul_category": "Extremely Low RUL",
+      "dominant_count": 999,
+      "interval_length": 1400,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_46",
+      "start_index": 7268,
+      "end_index": 9783,
+      "total_deviation": 1056.7493007758728,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 1732,
+      "interval_length": 2516,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_13",
+      "start_index": 5857,
+      "end_index": 9975,
+      "total_deviation": 1024.1241415446718,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 3143,
+      "interval_length": 4119,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_43",
+      "start_index": 7337,
+      "end_index": 9300,
+      "total_deviation": 880.276658805663,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 1663,
+      "interval_length": 1964,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_19",
+      "start_index": 8717,
+      "end_index": 9999,
+      "total_deviation": 687.9850739773972,
+      "dominant_rul_category": "Extremely Low RUL",
+      "dominant_count": 1000,
+      "interval_length": 1283,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_51",
+      "start_index": 4577,
+      "end_index": 7869,
+      "total_deviation": 630.0248606060684,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 2870,
+      "interval_length": 3293,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_14",
+      "start_index": 8622,
+      "end_index": 9995,
+      "total_deviation": 354.0736648364777,
+      "dominant_rul_category": "Extremely Low RUL",
+      "dominant_count": 996,
+      "interval_length": 1374,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_47",
+      "start_index": 4852,
+      "end_index": 9897,
+      "total_deviation": 325.67248768583283,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 5046,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_10",
+      "start_index": 2786,
+      "end_index": 9995,
+      "total_deviation": 313.190081906402,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 7210,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_38",
+      "start_index": 3110,
+      "end_index": 9843,
+      "total_deviation": 276.1319696669496,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 6734,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_39",
+      "start_index": 8222,
+      "end_index": 9562,
+      "total_deviation": 154.84655657430142,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 778,
+      "interval_length": 1341,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_41",
+      "start_index": 2868,
+      "end_index": 9938,
+      "total_deviation": 139.9432214349198,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 7071,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_42",
+      "start_index": 7326,
+      "end_index": 9894,
+      "total_deviation": 100.36293375832733,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 1674,
+      "interval_length": 2569,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_09",
+      "start_index": 5832,
+      "end_index": 5920,
+      "total_deviation": 61.46957489649294,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 89,
+      "interval_length": 89,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_18",
+      "start_index": 7904,
+      "end_index": 9995,
+      "total_deviation": 46.31404588628894,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 1096,
+      "interval_length": 2092,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_03",
+      "start_index": 5217,
+      "end_index": 9489,
+      "total_deviation": 32.33858125479592,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 3783,
+      "interval_length": 4273,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_08",
+      "start_index": 5767,
+      "end_index": 8750,
+      "total_deviation": 24.514905962596192,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 2984,
+      "interval_length": 2984,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_02",
+      "start_index": 8990,
+      "end_index": 9826,
+      "total_deviation": 19.57380504361334,
+      "dominant_rul_category": "Extremely Low RUL",
+      "dominant_count": 827,
+      "interval_length": 837,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_07",
+      "start_index": 3884,
+      "end_index": 9997,
+      "total_deviation": 11.365207201663512,
+      "dominant_rul_category": "Moderately Low RUL",
+      "dominant_count": 4000,
+      "interval_length": 6114,
+      "is_low_rul_indicator": true
+    },
+    {
+      "sensor": "sensor_31",
+      "start_index": 830,
+      "end_index": 4076,
+      "total_deviation": 16526.52586546712,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 3077,
+      "interval_length": 3247,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_27",
+      "start_index": 334,
+      "end_index": 623,
+      "total_deviation": 10840.478642622276,
+      "dominant_rul_category": "Extremely High RUL",
+      "dominant_count": 290,
+      "interval_length": 290,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_30",
+      "start_index": 882,
+      "end_index": 2443,
+      "total_deviation": 10405.230391349112,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 1444,
+      "interval_length": 1562,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_33",
+      "start_index": 241,
+      "end_index": 5543,
+      "total_deviation": 3681.799682178422,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 4000,
+      "interval_length": 5303,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_28",
+      "start_index": 242,
+      "end_index": 994,
+      "total_deviation": 3619.9785944894224,
+      "dominant_rul_category": "Extremely High RUL",
+      "dominant_count": 753,
+      "interval_length": 753,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_21",
+      "start_index": 934,
+      "end_index": 6526,
+      "total_deviation": 1938.037473327296,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 4000,
+      "interval_length": 5593,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_34",
+      "start_index": 2026,
+      "end_index": 6660,
+      "total_deviation": 1761.8507170216544,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 2974,
+      "interval_length": 4635,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_49",
+      "start_index": 19,
+      "end_index": 6923,
+      "total_deviation": 1271.9617996079426,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 4000,
+      "interval_length": 6905,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_45",
+      "start_index": 2170,
+      "end_index": 3141,
+      "total_deviation": 1190.3668208109389,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 972,
+      "interval_length": 972,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_23",
+      "start_index": 267,
+      "end_index": 3557,
+      "total_deviation": 1067.3179792979868,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 2558,
+      "interval_length": 3291,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_04",
+      "start_index": 736,
+      "end_index": 5915,
+      "total_deviation": 1042.733489448872,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 4000,
+      "interval_length": 5180,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_16",
+      "start_index": 2018,
+      "end_index": 4015,
+      "total_deviation": 927.4996522752425,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 1998,
+      "interval_length": 1998,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_26",
+      "start_index": 273,
+      "end_index": 2640,
+      "total_deviation": 878.9493110711281,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 1641,
+      "interval_length": 2368,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_05",
+      "start_index": 102,
+      "end_index": 4790,
+      "total_deviation": 859.8426874937431,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 3791,
+      "interval_length": 4689,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_20",
+      "start_index": 1797,
+      "end_index": 5399,
+      "total_deviation": 419.383369656981,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 3203,
+      "interval_length": 3603,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_44",
+      "start_index": 172,
+      "end_index": 3130,
+      "total_deviation": 411.0240193866872,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 2131,
+      "interval_length": 2959,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_01",
+      "start_index": 1,
+      "end_index": 2039,
+      "total_deviation": 184.00498048484283,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 1040,
+      "interval_length": 2039,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_12",
+      "start_index": 1870,
+      "end_index": 2960,
+      "total_deviation": 108.9272263430349,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 1091,
+      "interval_length": 1091,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_11",
+      "start_index": 1835,
+      "end_index": 7863,
+      "total_deviation": 97.06918848647521,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 3165,
+      "interval_length": 6029,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_00",
+      "start_index": 62,
+      "end_index": 4831,
+      "total_deviation": 9.493931137414075,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 3832,
+      "interval_length": 4770,
+      "is_low_rul_indicator": false
+    },
+    {
+      "sensor": "sensor_06",
+      "start_index": 2689,
+      "end_index": 4489,
+      "total_deviation": 7.656197497749996,
+      "dominant_rul_category": "Moderately High RUL",
+      "dominant_count": 1801,
+      "interval_length": 1801,
+      "is_low_rul_indicator": false
+    }
+  ]
+}

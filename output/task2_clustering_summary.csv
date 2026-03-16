@@ -1,0 +1,5 @@
+cluster_id,size,majority_class,majority_count,purity,count::Extremely High RUL,count::Moderately High RUL,count::Moderately Low RUL,count::Extremely Low RUL,mapping_discussion
+0,77,Moderately High RUL,39,0.5064935064935064,1.0,39,31,6.0,Cluster 0 is dominated by Moderately High RUL with purity 0.506.
+1,11,Moderately Low RUL,10,0.9090909090909091,,1,10,,Cluster 1 is dominated by Moderately Low RUL with purity 0.909.
+2,52,Moderately Low RUL,47,0.9038461538461539,,2,47,3.0,Cluster 2 is dominated by Moderately Low RUL with purity 0.904.
+3,9860,Moderately High RUL,3958,0.40141987829614606,999.0,3958,3912,991.0,Cluster 3 is dominated by Moderately High RUL with purity 0.401.
