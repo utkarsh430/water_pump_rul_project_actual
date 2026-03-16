@@ -8,6 +8,13 @@ The system will use core algorithmic techniques—Divide‑and‑Conquer segment
 - `main.py` is the main entry point of the project and contains the complete execution flow for all tasks.
 - `report.md` is the final written report for the project and includes the methodology, toy-example verification, dataset description, execution results, discussion, and conclusions.
 
+## Dataset
+
+This project uses the Water Pump RUL dataset downloaded from Kaggle.
+
+- Source: https://www.kaggle.com/datasets/anseldsouza/water-pump-rul-predictive-maintenance
+- File used for execution: `rul_hrs.csv`
+  
 ## What is included
 - Divide-and-Conquer segmentation for 10 selected sensors
 - Recursive top-down clustering for 4 clusters using all sensor features
