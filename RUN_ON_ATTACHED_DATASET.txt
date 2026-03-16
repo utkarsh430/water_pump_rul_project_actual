@@ -1,0 +1,8 @@
+This package was executed on the attached dataset file: rul_hrs.csv
+
+Execution command used:
+python main.py --csv_path /mnt/data/rul_hrs.csv --output_dir /mnt/data/water_pump_actual_output
+
+Important dataset note:
+The project mentions 52 sensor channels (sensor_00 to sensor_51), but the attached CSV contains 50 available sensor columns.
+Missing columns in this dataset: sensor_15 and sensor_50.
