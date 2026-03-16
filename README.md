@@ -1,13 +1,18 @@
-# Water Pump RUL - Final Working Deliverable
+# Project: Algorithmic Time‑Series Segmentation and Condition Analysis Using Water Pump RUL Dataset
 
-This submission is a complete from-scratch algorithmic project for the Water Pump RUL dataset.
+Objective is to develop an algorithm‑driven system to segment, cluster, and analyze time‑series sensor data from a real water‑pump machine.
+The system will use core algorithmic techniques—Divide‑and‑Conquer segmentation, Closest Pair, and Maximum Subarray—to characterize machine behavior and relate the results to four machine‑health categories derived from RUL (Remaining Useful Life).
+
+## Important Files
+
+- `main.py` is the main entry point of the project and contains the complete execution flow for all tasks.
+- `report.md` is the final written report for the project and includes the methodology, toy-example verification, dataset description, execution results, discussion, and conclusions.
 
 ## What is included
 - Divide-and-Conquer segmentation for 10 selected sensors
 - Recursive top-down clustering for 4 clusters using all sensor features
 - Kadane-based maximum deviation interval analysis for all sensors
 - Toy examples for correctness verification
-- Auto-generated report after execution
 - CSV summaries, JSON summary, and PNG plots
 
 ## Folder structure
